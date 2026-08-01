@@ -16,12 +16,13 @@ export function Hero() {
         transition={{ duration: 1.4 }}
       >
         <Image
-          src="/images/angel-hero.png"
+          src="/images/angel-hero-hq.png"
           alt="Ángel Mendoza, consultor de comunicación y marketing especializado en salud"
           fill
           priority
           fetchPriority="high"
           sizes="100vw"
+          quality={95}
         />
       </motion.div>
       <div className="hero-shade" aria-hidden="true" />

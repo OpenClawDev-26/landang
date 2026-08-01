@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const clients = [
   { name: "rIL", src: "/clients/ril.png" },
-  { name: "Impulso Dental", src: "/clients/impulso-dental.jpg" },
+  { name: "Impulso Dental", src: "/clients/impulso-dental-hq.png" },
   { name: "Yera", src: "/clients/yera.jpg" },
   { name: "Gonzalo Navarro", src: "/clients/gonzalo-navarro.jpg" },
   { name: "Luciano Badanelli", src: "/clients/badanelli.png" },
@@ -10,7 +10,7 @@ const clients = [
   { name: "B-One", src: "/clients/b-one.webp" },
   { name: "Ivoire", src: "/clients/ivoire.png" },
   { name: "Farmacia Escribano", src: "/clients/farmacia-escribano.avif" },
-  { name: "Saura Dental", src: "/clients/saura.png" },
+  { name: "Saura Dental", src: "/clients/saura-hq-alpha.png" },
   { name: "Diana Escudero", src: "/clients/diana-escudero.png" },
   { name: "Santisteban Academy", src: "/clients/santisteban.webp" },
   { name: "Irida Psicólogos", src: "/clients/irida.png" },
@@ -35,6 +35,7 @@ export function LogoMarquee() {
                 alt={`Logo de ${client.name}`}
                 fill
                 sizes="180px"
+                quality={95}
               />
             </figure>
           ))}

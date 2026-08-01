@@ -101,10 +101,11 @@ export default function Home() {
         <section className="trajectory-section" id="trayectoria" aria-labelledby="trajectory-title">
           <figure className="trajectory-photo">
             <Image
-              src="/images/angel-expodental.png"
+              src="/images/angel-expodental-hq.png"
               alt="Ángel Mendoza con parte del equipo de rIL en Expodental"
               fill
               sizes="(max-width: 800px) 100vw, 48vw"
+              quality={95}
             />
             <figcaption>Expodental · Madrid</figcaption>
           </figure>
