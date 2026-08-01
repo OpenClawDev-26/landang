@@ -20,6 +20,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 COPY package.json ./
 RUN npm install --omit=dev
+COPY --from=builder /app/next.config.ts ./next.config.ts
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 
