@@ -1,13 +1,14 @@
-import type { Metadata, Viewport } from "next";
-import "./globals.css";
-import { MotionProvider } from "@/components/motion-provider";
+import type { Metadata, Viewport } from "next"
+import "./globals.css"
+import { MotionProvider } from "@/components/motion-provider"
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://angelmendoza.es";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://angelmendoza.es"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ángel Mendoza | Consultor de Comunicación y Marketing para Clínicas",
+    default:
+      "Ángel Mendoza | Consultor de Comunicación y Marketing para Clínicas",
     template: "%s | Ángel Mendoza",
   },
   description:
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     siteName: "Ángel Mendoza",
     locale: "es_ES",
     type: "profile",
+
     images: [{ url: "/images/angel-hero-hq.png", width: 3326, height: 1892 }],
   },
   twitter: {
@@ -30,12 +32,12 @@ export const metadata: Metadata = {
     images: ["/images/angel-hero-hq.png"],
   },
   robots: { index: true, follow: true },
-};
+}
 
 export const viewport: Viewport = {
   themeColor: "#005B85",
   colorScheme: "light",
-};
+}
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -51,13 +53,17 @@ const personSchema = {
     "Captación de pacientes",
     "Marketing digital",
   ],
-};
+}
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es-ES">
       <body>
-        <a className="skip-link" href="#contenido">Saltar al contenido</a>
+        <a className="skip-link" href="#contenido">
+          Saltar al contenido
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -65,5 +71,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
-  );
+  )
 }
