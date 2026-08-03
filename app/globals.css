@@ -99,7 +99,7 @@ h2 { font-size: clamp(3rem, 6.3vw, 6.6rem); font-weight: 760; }
 .hero-index i { width: 4.5rem; height: 1px; background: rgba(255,255,255,.7); }
 
 /* Working together */
-.work-section { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: center; padding: var(--section) var(--page); background: var(--paper); }
+.work-section { display: grid; grid-template-columns: minmax(0, 3.4fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; padding: var(--section) var(--page); background: var(--paper); }
 .work-copy { min-width: 0; }
 .section-intro { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem 5rem; align-items: end; margin-bottom: clamp(3rem, 6vw, 6rem); }
 .section-intro .eyebrow { grid-column: 1 / -1; }
@@ -115,7 +115,7 @@ h2 { font-size: clamp(3rem, 6.3vw, 6.6rem); font-weight: 760; }
 .work-list p { max-width: 58ch; margin: 0; color: var(--blue-deep); font-size: clamp(1rem, 1.4vw, 1.18rem); font-weight: 600; line-height: 1.45; }
 .work-list svg { color: var(--sky); }
 .work-photo { position: relative; min-height: 640px; align-self: stretch; margin: 0; overflow: hidden; }
-.work-photo img { object-fit: cover; object-position: center 30%; }
+.work-photo img { object-fit: cover; object-position: 34% 22%; }
 
 /* Clients */
 .clients-section { overflow: hidden; padding: clamp(4rem, 7vw, 7rem) 0; background: var(--fog); }
