@@ -105,7 +105,7 @@ export default function Home() {
               alt="Ángel Mendoza con parte del equipo de rIL en Expodental"
               fill
               sizes="(max-width: 800px) 100vw, 48vw"
-              quality={95}
+              quality={100}
             />
             <figcaption>Expodental · Madrid</figcaption>
           </figure>

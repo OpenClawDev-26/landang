@@ -22,7 +22,7 @@ export function Hero() {
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={95}
+          quality={100}
         />
       </motion.div>
       <div className="hero-shade" aria-hidden="true" />

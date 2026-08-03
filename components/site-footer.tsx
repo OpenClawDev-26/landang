@@ -11,6 +11,7 @@ export function SiteFooter() {
             alt="Ángel Mendoza"
             width={330}
             height={56}
+            quality={100}
           />
         </a>
         <p>Consultor de Comunicación y Marketing especializado en sector salud.</p>

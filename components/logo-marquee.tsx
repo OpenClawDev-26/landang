@@ -35,7 +35,7 @@ export function LogoMarquee() {
                 alt={`Logo de ${client.name}`}
                 fill
                 sizes="180px"
-                quality={95}
+                quality={100}
               />
             </figure>
           ))}

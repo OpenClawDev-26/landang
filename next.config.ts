@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   output: staticExport ? "export" : undefined,
   images: {
     formats: ["image/avif", "image/webp"],
-    qualities: [75, 95],
+    qualities: [75, 100],
     unoptimized: staticExport,
   },
 };

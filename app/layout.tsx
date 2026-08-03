@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     siteName: "Ángel Mendoza",
     locale: "es_ES",
     type: "profile",
-    images: [{ url: "/images/angel-hero.png", width: 1680, height: 946 }],
+    images: [{ url: "/images/angel-hero-hq.png", width: 3326, height: 1892 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ángel Mendoza — Tu consultor de cabecera",
     description: "Comunicación y marketing para clínicas y empresas de salud.",
-    images: ["/images/angel-hero.png"],
+    images: ["/images/angel-hero-hq.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -43,7 +43,7 @@ const personSchema = {
   name: "Ángel Mendoza",
   jobTitle: "Consultor de Comunicación y Marketing",
   url: siteUrl,
-  image: `${siteUrl}/images/angel-hero.png`,
+  image: `${siteUrl}/images/angel-hero-hq.png`,
   worksFor: { "@type": "Organization", name: "rIL Medical" },
   knowsAbout: [
     "Marketing para clínicas",

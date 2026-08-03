@@ -28,6 +28,7 @@ export function SiteHeader() {
           width={320}
           height={54}
           priority
+          quality={100}
         />
       </a>
 
