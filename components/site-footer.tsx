@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -20,9 +19,6 @@ export function SiteFooter() {
         <a href="/aviso-legal">Aviso legal</a>
         <a href="/politica-de-privacidad">Privacidad</a>
         <a href="/politica-de-cookies">Cookies</a>
-        <a href="mailto:angelmendozarivero@gmail.com">
-          Email <ArrowUpRight aria-hidden="true" size={15} />
-        </a>
       </nav>
       <p className="footer-meta">© {new Date().getFullYear()} Ángel Mendoza</p>
     </footer>

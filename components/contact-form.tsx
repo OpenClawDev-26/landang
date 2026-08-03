@@ -70,7 +70,7 @@ export function ContactForm() {
             type="tel"
             autoComplete="tel"
             inputMode="tel"
-            pattern="(?:\\+34[ -]?)?[6789]\\d{2}[ -]?\\d{3}[ -]?\\d{3}"
+            pattern="(?:\+34[ \-]?)?[6789]\d{2}[ \-]?\d{3}[ \-]?\d{3}"
             placeholder="600 000 000"
             required
           />

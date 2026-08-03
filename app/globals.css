@@ -7,6 +7,7 @@
   --ink: #26343b;
   --muted: #65747b;
   --paper: #f5f7f6;
+  --fog: #dde3e5;
   --white: #ffffff;
   --line: rgba(0, 59, 89, 0.18);
   --page: clamp(1.25rem, 4vw, 4.75rem);
@@ -98,27 +99,33 @@ h2 { font-size: clamp(3rem, 6.3vw, 6.6rem); font-weight: 760; }
 .hero-index i { width: 4.5rem; height: 1px; background: rgba(255,255,255,.7); }
 
 /* Working together */
-.work-section { padding: var(--section) var(--page); background: var(--paper); }
+.work-section { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: center; padding: var(--section) var(--page); background: var(--paper); }
+.work-copy { min-width: 0; }
 .section-intro { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem 5rem; align-items: end; margin-bottom: clamp(3rem, 6vw, 6rem); }
 .section-intro .eyebrow { grid-column: 1 / -1; }
 .section-intro h2 { margin: 0; max-width: 8ch; }
 .section-intro > p { max-width: 40ch; margin: 0 0 .6rem; color: var(--muted); font-size: 1.08rem; }
+.work-intro { display: block; }
+.work-intro h2 { max-width: 11ch; margin-bottom: 1.1rem; }
+.work-intro > p { max-width: 46ch; margin-bottom: 0; }
 .work-list { list-style: none; margin: 0 0 2.5rem; padding: 0; border-top: 2px solid var(--blue-deep); }
 .work-list li { display: grid; grid-template-columns: 5.5rem 1fr auto; gap: 1rem; align-items: center; min-height: 112px; padding: 1.4rem 0; border-bottom: 1px solid var(--line); transition: transform .25s, background .25s; }
 .work-list li:hover { transform: translateX(.7rem); background: white; }
 .work-list li > span { color: var(--sky); font-size: .78rem; font-weight: 780; }
-.work-list p { max-width: 78ch; margin: 0; color: var(--blue-deep); font-size: clamp(1rem, 1.5vw, 1.3rem); font-weight: 600; line-height: 1.45; }
+.work-list p { max-width: 58ch; margin: 0; color: var(--blue-deep); font-size: clamp(1rem, 1.4vw, 1.18rem); font-weight: 600; line-height: 1.45; }
 .work-list svg { color: var(--sky); }
+.work-photo { position: relative; min-height: 640px; align-self: stretch; margin: 0; overflow: hidden; }
+.work-photo img { object-fit: cover; object-position: center 30%; }
 
 /* Clients */
-.clients-section { overflow: hidden; padding: clamp(4rem, 7vw, 7rem) 0; background: white; }
+.clients-section { overflow: hidden; padding: clamp(4rem, 7vw, 7rem) 0; background: var(--fog); }
 .clients-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin: 0 var(--page) 3rem; }
 .clients-heading h2 { margin: 0; font-size: clamp(2.8rem, 5vw, 5.2rem); }
 .clients-heading p { max-width: 34ch; margin: 0 0 .5rem; color: var(--muted); font-size: .9rem; }
 .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); }
-.marquee-track { display: flex; width: max-content; animation: marquee 34s linear infinite; }
+.marquee-track { display: flex; align-items: center; gap: 2rem; width: max-content; animation: marquee 34s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.client-logo { position: relative; width: 190px; height: 92px; margin: 0 1rem; filter: grayscale(.75); opacity: .8; transition: filter .25s, opacity .25s, transform .25s; }
+.client-logo { position: relative; flex: none; width: 190px; height: 92px; filter: grayscale(.35); opacity: .92; transition: filter .25s, opacity .25s, transform .25s; }
 .client-logo:hover { filter: grayscale(0); opacity: 1; transform: translateY(-4px); }
 .client-logo img { object-fit: contain; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -259,6 +266,8 @@ h2 { font-size: clamp(3rem, 6.3vw, 6.6rem); font-weight: 760; }
   .hero-index { display: none; }
   .section-intro { grid-template-columns: 1fr; }
   .section-intro .eyebrow { grid-column: auto; }
+  .work-section { grid-template-columns: 1fr; gap: 3rem; }
+  .work-photo { min-height: min(110vw, 560px); }
   .know-section { grid-template-columns: 1fr; min-height: auto; }
   .know-video { padding: 0 var(--page) var(--section); }
   .trajectory-section { grid-template-columns: 1fr; }
@@ -281,7 +290,8 @@ h2 { font-size: clamp(3rem, 6.3vw, 6.6rem); font-weight: 760; }
   .work-list li svg { display: none; }
   .clients-heading { display: block; }
   .clients-heading p { margin-top: 1rem; }
-  .client-logo { width: 145px; height: 74px; margin: 0 .7rem; }
+  .marquee-track { gap: 1.4rem; }
+  .client-logo { width: 145px; height: 74px; }
   .know-copy { padding: var(--section) var(--page) 3.5rem; }
   .video-frame { aspect-ratio: 4 / 3; }
   .play-button { width: 66px; height: 66px; }
