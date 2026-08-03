@@ -59,38 +59,40 @@ export default function Home() {
         <Hero />
 
         <section className="work-section" id="como-trabajamos" aria-labelledby="work-title">
-          <div className="work-copy">
-            <Reveal className="section-intro work-intro">
-              <h2 id="work-title">¿Cómo es trabajar conmigo?</h2>
-              <p>
-                Una conversación directa para entender dónde estás, qué te preocupa y cuál puede ser el siguiente paso.
-              </p>
-            </Reveal>
+          <Reveal className="section-intro work-intro">
+            <h2 id="work-title">¿Cómo es trabajar conmigo?</h2>
+            <p>
+              Una conversación directa para entender dónde estás, qué te preocupa y cuál puede ser el siguiente paso.
+            </p>
+          </Reveal>
 
-            <ol className="work-list">
-              {workSteps.map((step, index) => (
-                <li key={step}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{step}</p>
-                  <Check aria-hidden="true" />
-                </li>
-              ))}
-            </ol>
+          <div className="work-row">
+            <div className="work-list-col">
+              <ol className="work-list">
+                {workSteps.map((step, index) => (
+                  <li key={step}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <p>{step}</p>
+                    <Check aria-hidden="true" />
+                  </li>
+                ))}
+              </ol>
 
-            <a className="button button-dark" href="#contacto">
-              Reserva ya una consultoría gratuita <ArrowDownRight aria-hidden="true" />
-            </a>
+              <a className="button button-dark" href="#contacto">
+                Reserva ya una consultoría gratuita <ArrowDownRight aria-hidden="true" />
+              </a>
+            </div>
+
+            <figure className="work-photo">
+              <Image
+                src="/images/angel-consulta.png"
+                alt="Ángel Mendoza conversando con un médico durante una consultoría"
+                fill
+                sizes="(max-width: 900px) 100vw, 38vw"
+                quality={100}
+              />
+            </figure>
           </div>
-
-          <figure className="work-photo">
-            <Image
-              src="/images/angel-consulta.png"
-              alt="Ángel Mendoza conversando con un médico durante una consultoría"
-              fill
-              sizes="(max-width: 900px) 100vw, 38vw"
-              quality={100}
-            />
-          </figure>
         </section>
 
         <LogoMarquee />
