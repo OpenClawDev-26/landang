@@ -1,0 +1,20 @@
+{
+  "files.exclude": {
+    "**/.agents": true,
+    "**/.claude": true,
+    "**/.opencode": true,
+    "**/.cursor": true,
+    "**/.codex": true,
+    "CLAUDE.md": true,
+    "opencode.json": true
+  },
+  "files.eol": "\n",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, tsconfig.json, tsconfig.tsbuildinfo, next.config.ts, next-env.d.ts, eslint.config.mjs, postcss.config.mjs, vercel.json",
+    ".env.example": ".env.local, .env.test.local",
+    "README.md": "AGENTS.md, CLAUDE.md, DESIGN.md",
+    ".gitignore": ".gitattributes, .editorconfig, .npmrc, .nvmrc, .vercel"
+  }
+}

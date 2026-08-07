@@ -3,6 +3,16 @@ node_modules/
 out/
 .env*
 !.env.example
+
+# ai-dev-config — junctions al kit compartido (no son ficheros de este repo)
+.agents/
+.claude/
+.opencode/
+.cursor/commands/
+.codex/
+# sesiones de agent-browser (contienen tokens vivos)
+.auth/
+.playwright-mcp/
 npm-debug.log*
 .review/
 .impeccable/
